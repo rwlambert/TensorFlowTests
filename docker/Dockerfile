@@ -7,3 +7,5 @@ RUN useradd ktbuser
 RUN mkdir -p /home/ktbuser
 RUN chown ktbuser:ktbuser /home/ktbuser
 RUN yum -y install sudo
+# Fix KTB bug in rootnotes for 6.04
+RUN sed -i 's/if rootv == 5/if True/g' /opt/KaveToolbox/pro/python/rootnotes/__init__.py
