@@ -10,6 +10,8 @@ Build/run docker container, or repeat installation within own virtual env
 ```
 cd docker
 bash build_run.sh
+# then if some time later the container is dead or stopped
+bash start_exec.sh
 ```
 
 * connect to localhost:8088 for ipython notebooks (Since docker creates things under the root user, you may need to chmod them later.)
